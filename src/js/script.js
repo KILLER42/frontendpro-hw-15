@@ -1,15 +1,8 @@
-// Получаем от юзера три числа через prompt
-var number1 = parseFloat(prompt("Введите первое число:"));
-var number2 = parseFloat(prompt("Введите второе число:"));
-var number3 = parseFloat(prompt("Введите третье число:"));
+'use strict';
 
-// Проверяем, являются ли введенные значения числами
-if (isNaN(number1) || isNaN(number2) || isNaN(number3)) {
-    alert("Пожалуйста, введите корректные числа.");
-} else {
-    // Вычисляем среднее арифметическое
-    var average = (number1 + number2 + number3) / 3;
+const firstNumber = Number(prompt('Enter first number'));
+const secondNumber = Number(prompt('Enter second number'));
+const thirdNumber = Number(prompt('Enter third number'));
+const average = ((firstNumber + secondNumber + thirdNumber) / 3).toFixed(1);
 
-    // Выводим результат среднего арифметического через alert
-    alert("Среднее арифметическое введенных чисел: " + average);
-}
+alert('The arithmetic mean of your numbers is ' + average);
